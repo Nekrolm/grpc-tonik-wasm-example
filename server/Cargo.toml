@@ -1,0 +1,21 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2018"
+resolver = "2"
+
+[dependencies]
+tokio = {version = "1.12", features = ["rt-multi-thread", "rt"] }
+tonic = "0.5"
+tonic-web = "0.1"
+prost = "0.8"
+prost-types = "0.8"
+
+
+[build-dependencies]
+tonic-build = {version = "0.5", features = ["prost"]}
+
+
+[features]
+build_client = []
+build_server = []
